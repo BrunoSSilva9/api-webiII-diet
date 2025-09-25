@@ -1,11 +1,17 @@
-import fastify from "fastify";
+import fastify from 'fastify'
+import cookie from '@fastify/cookie' // Importe o plugin de cookie
+import { usuariosRoutes } from './routes/usuarios'
 
-const app = fastify();
+const app = fastify()
+app.register(cookie)
 
-app.get("/", () => {
-  return "Servidor no ar!";
-});
+// Registra as rotas de usuários
+app.register(usuariosRoutes, {
+  prefix: 'usuarios', 
+})
 
-app.listen({ port: 3333 }).then(() => {
-  console.log("HTTP Server running on port 3333");
-});
+app.listen({
+  port: 3333,
+}).then(() => {
+  console.log('Servidor HTTP rodando na porta 3333!')
+})
