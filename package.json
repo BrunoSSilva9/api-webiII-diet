@@ -21,5 +21,13 @@
     "sqlite3": "^5.1.7",
     "zod": "^4.1.11"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoSSilva9/api-webiII-diet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrunoSSilva9/api-webiII-diet/issues"
+  },
+  "homepage": "https://github.com/BrunoSSilva9/api-webiII-diet#readme"
 }
